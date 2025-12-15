@@ -1,195 +1,249 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hemanth Kothapalli - Resume</title>
+    <title>Hemanth Kothapalli | ML Systems Engineer & Network Security Researcher</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script defer src="script.js"></script>
 </head>
+
 <body>
-    <div class="container">
-        <!-- Header Section -->
-        <div class="header">
-            <div class="header-text">
-                <h1>HEMANTH KOTHAPALLI</h1>
-            </div>
-                <div class="contact-info">
-                    <div class="icon-container">
-                        <a href="tel:+916300165866" class="contact-icon">
-                            <i class="fas fa-mobile-alt"></i>
-                        </a>
-                    </div>
-                    <div class="icon-container">
-                        <a href="mailto:7hemanthk@gmail.com" class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                    </div>
-                    <div class="icon-container">
-                        <a href="https://www.linkedin.com/in/hemanthk1/" target="_blank" class="contact-icon">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                    </div>
-                    <div class="icon-container">
-                        <a href="https://github.com/Hemanth3047-hub" target="_blank" class="contact-icon">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </div>
-                </div>
-            <div class="profile-image">
-                <img src="your-photo.jpeg" alt="Hemanth Kothapalli">
-            </div>
+
+    <!-- ======================================================
+         TOP NAVIGATION
+    ======================================================= -->
+    <nav class="nav">
+        <div class="nav-left">
+            <a href="#home" class="nav-name">Hemanth Kothapalli</a>
         </div>
 
-        <!-- Tabs Navigation -->
-        <div class="tabs">
-            <div class="tab active" onclick="openTab('home')">Home</div>
-            <div class="tab" onclick="openTab('research')">Research & Skills</div>
-            <div class="tab" onclick="openTab('projects')">Projects</div>
-            <div class="tab" onclick="openTab('coursework')">Coursework</div>
+        <div class="nav-right">
+            <a href="#about">About</a>
+            <a href="#news">News</a>
+            <a href="#pubs">Publications</a>
+            <a href="#research">Research Interests</a>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills</a>
+            <a href="#coursework">Coursework</a>
+            <a href="#awards">Awards</a>
+            <button id="theme-toggle" class="theme-toggle">🌙</button>
         </div>
+    </nav>
 
-        <!-- Home Tab Content -->
-        <div id="home" class="tab-content">
-            <div class="about-section">
-                <h2>About Me</h2>
-                <p class="about-text">
-                    Hemanth Kothapalli is an Engineer (Qualcomm-AISW) and systems researcher focused on building secure and high-performance infrastructures for large-scale machine learning. His work spans programmable networks, distributed systems, and ML deployment, shaped by both academic research and industry experience. At IIT Hyderabad’s NetX Lab, he developed scalable dataplane mechanisms for IoT security, with results published in leading networking venues such as SIGCOMM, IEEE IFIP NOMS, and related forums. In industry, he strengthened his understanding of full-stack ML systems by working on optimization and performance bottlenecks across compilation, memory, and communication layers. Through these experiences, he has become deeply interested in how future AI clusters can integrate programmable switches, SmartNICs, and intelligent dataplanes to improve robustness, efficiency, and security. He aims to contribute to the next generation of distributed AI systems by unifying architectural thinking across networks, memory, and computation.
-                </p>
-            </div>
-            <h2>Education</h2>
-<!-- 
-            <h2>About Me</h2>
-            <p class="about-text">
-                Hemanth Kothapalli is an Engineer (Qualcomm-AISW) and systems researcher focused on building secure and high-performance infrastructures for large-scale machine learning. His work spans programmable networks, distributed systems, and ML deployment, shaped by both academic research and industry experience. At IIT Hyderabad’s NetX Lab, he developed scalable dataplane mechanisms for IoT security, with results published in leading networking venues such as SIGCOMM, IEEE IFIP NOMS, and related forums. In industry, he strengthened his understanding of full-stack ML systems by working on optimization and performance bottlenecks across compilation, memory, and communication layers. Through these experiences, he has become deeply interested in how future AI clusters can integrate programmable switches, SmartNICs, and intelligent dataplanes to improve robustness, efficiency, and security. He aims to contribute to the next generation of distributed AI systems by unifying architectural thinking across networks, memory, and computation.
+
+    <!-- ======================================================
+         HERO SECTION (2-COLUMN)
+    ======================================================= -->
+    <section id="home" class="hero">
+        <div class="hero-text">
+            <h1 class="name">Hemanth Kothapalli</h1>
+            <h2 class="role">ML Systems Engineer & Network Security Researcher</h2>
+
+            <p class="intro">
+                I am an engineer and systems researcher focused on building secure and high-performance
+                infrastructures for large-scale machine learning. My work spans programmable networks,
+                distributed systems, and ML deployment, shaped by research at IIT Hyderabad’s NetX Lab
+                and industry experience at Qualcomm. I am interested in how future AI clusters can
+                integrate programmable switches, SmartNICs, and intelligent dataplanes to improve
+                robustness, efficiency, and security.
             </p>
-            <h2>Education</h2> -->
 
-            <div class="experience">
-                
-                <h3>Indian Institute of Technology, Hyderabad</h3>
-                <p class="date-location">Jul. 2019 – May. 2023 | Hyderabad, India</p>
-                <p>Bachelor of Technology in Computer Science & Engineering and Engineering Science, CGPA: 8.59/10</p>
-            </div>
-
-            <h2>Work Experience</h2>
-            <div class="experience">
-                <h3>Engineer (AISW) | Qualcomm</h3>
-                <p class="date-location">Jul 2023 – Present</p>
-                <ul>
-                    <li>Accelerated large model conversion by designing a lazy weight-loading system and core graph optimizations, significantly reducing memory overhead and processing time for models exceeding <b>100 parameters</b>.</li>
-                    <li>Engineered <b>64-bit DMA</b> support to overcome the 4GB memory limit, enabling efficient execution for the largest production LLMs and eliminating multi-partition descriptor complexity</li>
-                    <li>Scaled validation infrastructure to manage <b>200,000+</b> test cases, automating framework unification and increasing test coverage for critical compiler releases across <b>3 SOC platforms</b>.</li>
-                    <li>Reduced onboarding latency for new model architectures (e.g., Whisper, Llama) by building automated pipelines that cut manual configuration time by <b>50%</b> and ensured robustness in nightly testing.</b>.</li>
-                </ul>
-            </div>
-            <div class="experience">
-                <h3>Software Intern | Qualcomm</h3>
-                <p class="date-location">May 2022 – Jul 2022</p>
-                <ul>
-                    <li>Developed Xlog Analytics using Django and JavaScript for error log analysis, adopted by AI Software team.</li>
-                </ul>
-            </div>
-            <div class="experience">
-                <h3>Teaching Assistant | IIT Hyderabad</h3>
-                <p class="date-location">Jul 2021 – May 2023</p>
-                <ul>
-                    <li>Assisted in Foundations of ML, DBMS-II, and Data Structures courses.</li>
-                </ul>
-            </div>
+            <p class="links">
+                <a href="mailto:7hemanthk@gmail.com">Email</a> • 
+                <a href="https://github.com/Hemanth3047-hub" target="_blank">GitHub</a> • 
+                <a href="https://www.linkedin.com/in/hemanthk1/" target="_blank">LinkedIn</a> • 
+                <a href="resume.pdf" target="_blank">Resume</a>
+            </p>
         </div>
 
-        <!-- Research Tab Content -->
-        <div id="research" class="tab-content">
-            <h2>Research Publications and Achievements</h2>
-            <div class="experience">
-                <h3><a href="https://hemanth3047-hub.github.io/publications/MUD-Scale.pdf" target="_blank">Scaling IoT MUD Enforcement using Programmable DataPlanes</a></h3>
-                <p class="date-location"> (Jul 2022 – May 2023)</p>
-                <p>Accepted to IEEE/IFIP NOMS'23, Miami, USA</p>
-            </div>
-            <div class="experience">
-                <h3><a href="https://hemanth3047-hub.github.io/publications/IoTMUD-FFSPIN.pdf" target="_blank">IoT MUD Enforcement in the Edge Cloud using Programmable Switch</a></h3>
-                <p class="date-location">(Jul 2021 – May 2022)</p>
-                <p>Accepted to ACM SIGCOMM'22 workshop on Security for P4 - FFSPIN, Amsterdam, Netherlands</p>
-            </div>
-            <div class="experience">
-                <h3><a href="https://hemanth3047-hub.github.io/Certificates/VAK_Research_Award.pdf" target="_blank">VAK UG Research Excellence Award, 2023 | Network Security Researcher @ IITH</a></h3>
-                <p class="date-location">(Apr 2023)</p>
-                <p>Honored as the sole recipient of the top undergraduate researcher award for the 2023 batch</p>
-            </div>
-
-            <h2>Technical Skills</h2>
-            <ul>
-                <li><strong>Languages & Security Tools:</strong> Python, C/C++, Java, P4, Splunk SOAR, Elasticsearch, Kibana, SDN Controllers</li>
-                <li><strong>Machine Learning:</strong> NumPy, Pandas, Scikit-learn, TensorFlow, Keras, Pattern Recognition, Matplotlib</li>
-                <li><strong>Development & Frameworks:</strong> SQL, JavaScript, Django, Flutter, Git, YAML, CI/CD</li>
-            </ul>
+        <div class="hero-photo">
+            <img src="your-photo.jpeg" alt="Hemanth Kothapalli">
         </div>
+    </section>
 
-        <!-- Projects Tab Content -->
-        <div id="projects" class="tab-content">
-            <h2>Projects</h2>
-            <div class="experience">
-                <h3><a href="https://github.com/Hemanth3047-hub/Image-Transition" target="_blank">Image Transition</a> | Python, Machine Learning</h3>
-                <ul>
-                    <li>Implemented Variational Autoencoder model for image interpolation between input pairs, demonstrating improved accuracy on public and custom weather datasets.</li>
-                </ul>
-            </div>
-            <div class="experience">
-                <h3><a href="https://github.com/Hemanth3047-hub/Hand-Gesture-Recognition-using-Convolution-Neural-Network" target="_blank">Hand gesture recognition using CNN's</a> | Python, Machine Learning</h3>
-                <ul>
-                    <li>Built a CNN model and trained it with a dataset developed by capturing hand signs (following ASL convention) through webcam, achieving 99.95% accuracy.</li>
-                </ul>
-            </div>
-            <div class="experience">
-                <h3><a href="https://github.com/Hemanth3047-hub/PPMS_FULL_STACK" target="_blank">PhD Progress Management System</a> | Flutter, Django</h3>
-                <ul>
-                    <li>Led a team of three in developing an application for PhD scholars of IITH to track their academic progress and send alerts for upcoming deadlines.</li>
-                </ul>
-            </div>
-            <div class="experience">
-                <h3><a href="https://github.com/Hemanth3047-hub/Reliable-Data-Transfer-RDT-over-UDP/tree/main/Reliable-Data-Transfer-RDT-over-UDP-main/Reliable-Data-Transfer-RDT-over-UDP-main" target="_blank">UDP-based FTP tool</a> | Multi-thread, CPP</h3>
-                <ul>
-                    <li>developed a UDP-based FTP tool with Reliable Data Transfer mechanisms and multithreaded optimizations, achieving around <b>15%</b> higher throughput and <b>30%</b> lower latency than standard TCP file transfer tools in lossy network conditions.</li>
-                </ul>
-            </div>
-            <div class="experience">
-                <h3><a href="https://github.com/Hemanth3047-hub/DBMS-II" target="_blank">Management of Scientific Research Papers Database</a> | PostgreSQL, DBMS</h3>
-                <ul>
-                    <li>Built a relational database from scratch, populated it with information about research publications, and executed complex PostgreSQL queries.</li>
-                </ul>
-            </div>
-            <div class="experience">
-                <h3><a href="https://github.com/Hemanth3047-hub/Covid-19-SIR-Simulator" target="_blank">Covid-19 SIR Simulator</a> | C++, Data Structures</h3>
-                <ul>
-                    <li>Developed a system to track the number of people suspected, infected, and recovered based on probabilistic thresholds using graphs, adjacency lists, and priority queues.</li>
-                </ul>
-            </div>
-        </div>
 
-        <!-- Coursework & Extracurricular Tab Content -->
-        <div id="coursework" class="tab-content">
-            <h2>Coursework</h2>
-            <h3>Relevant Coursework</h3>
-            <ul>
-                <li>Computer Networks</li>
-                <li>Foundations of Machine Learning</li>
-                <li>Deep Learning</li>
-                <li>Theory of Computation</li>
-                <li>Data Structures and Algorithms</li>
-                <li>Probability in Computing</li>
-                <li>Reinforcement Learning</li>
-                <li>Operating Systems</li>
-                <li>Database Management Systems</li>
-                <li>Principles of Programming Languages</li>
-            </ul>
-            <!-- <h3>Extracurricular Activities</h3>
-            <p>Details on extracurricular activities will be added here.</p> -->
-        </div>
-    </div>
-    <script src="script.js"></script>
+    <!-- ======================================================
+         HIGHLIGHTS (Calm, minimal)
+    ======================================================= -->
+    <section class="highlights">
+        <div class="highlight"><strong>2</strong><br>Publications</div>
+        <div class="highlight"><strong>3+ Years</strong><br>ML Systems Engineering</div>
+        <div class="highlight"><strong>200,000+</strong><br>Automated Test Cases</div>
+        <div class="highlight"><strong>IoT Security</strong><br>Research Background</div>
+    </section>
+
+
+    <!-- ======================================================
+         ABOUT SECTION
+    ======================================================= -->
+    <section id="about" class="section">
+        <h2>About</h2>
+        <p>
+            I work at the intersection of machine learning systems, programmable networks,
+            and distributed infrastructures. Previously, at IIT Hyderabad’s NetX Lab, I developed
+            scalable dataplane mechanisms for IoT security, with publications at IEEE/IFIP NOMS
+            and ACM SIGCOMM workshop venues. At Qualcomm, I strengthened my understanding of
+            full-stack ML systems by working across compilation, memory, and communication layers.
+        </p>
+    </section>
+
+
+    <!-- ======================================================
+         NEWS SECTION
+    ======================================================= -->
+    <section id="news" class="section">
+        <h2>News</h2>
+        <ul>
+            <li><strong>2023:</strong> Paper accepted to IEEE/IFIP NOMS 2023.</li>
+            <li><strong>2022:</strong> Paper accepted to ACM SIGCOMM Security for P4 Workshop.</li>
+            <li><strong>2023:</strong> Joined Qualcomm AI Software team as Engineer (AISW).</li>
+        </ul>
+    </section>
+
+
+    <!-- ======================================================
+         PUBLICATIONS
+    ======================================================= -->
+    <section id="pubs" class="section">
+        <h2>Publications</h2>
+
+        <p>
+            <strong>Scaling IoT MUD Enforcement using Programmable Dataplanes</strong><br>
+            <em>IEEE/IFIP NOMS 2023.</em><br>
+            <a href="https://hemanth3047-hub.github.io/publications/MUD-Scale.pdf" target="_blank">PDF</a>
+            <br><br>
+
+            <strong>IoT MUD Enforcement in the Edge Cloud using Programmable Switches</strong><br>
+            <em>ACM SIGCOMM 2022 – Security for P4 Workshop.</em><br>
+            <a href="https://hemanth3047-hub.github.io/publications/IoTMUD-FFSPIN.pdf" target="_blank">PDF</a>
+        </p>
+    </section>
+
+
+    <!-- ======================================================
+         RESEARCH INTERESTS
+    ======================================================= -->
+    <section id="research" class="section">
+        <h2>Research Interests</h2>
+        <ul>
+            <li>Distributed ML Systems</li>
+            <li>ML Compilers & Runtime Optimization</li>
+            <li>Programmable Networks (P4, SmartNICs)</li>
+            <li>Dataplane Security for IoT & Edge Systems</li>
+        </ul>
+    </section>
+
+
+    <!-- ======================================================
+         PROJECTS
+    ======================================================= -->
+    <section id="projects" class="section">
+        <h2>Projects</h2>
+
+        <p>
+            <strong>Image Transition using Variational Autoencoders</strong><br>
+            Variational Autoencoder model for interpolating across latent spaces, improving interpolation
+            consistency on weather and public datasets.
+            <br>
+            <a href="https://github.com/Hemanth3047-hub/Image-Transition" target="_blank">GitHub</a>
+        </p>
+
+        <p>
+            <strong>Reliable UDP-based FTP Tool (Multithreaded C++)</strong><br>
+            Implemented selective retransmission and multithreaded optimizations, achieving higher
+            throughput and lower latency than TCP in lossy networks.
+            <br>
+            <a href="https://github.com/Hemanth3047-hub/Reliable-Data-Transfer-RDT-over-UDP" target="_blank">GitHub</a>
+        </p>
+
+        <p>
+            <strong>Hand Gesture Recognition using CNNs</strong><br>
+            Collected an ASL-style custom dataset and trained a CNN with 99.95% accuracy.
+            <br>
+            <a href="https://github.com/Hemanth3047-hub/Hand-Gesture-Recognition-using-Convolution-Neural-Network" target="_blank">GitHub</a>
+        </p>
+    </section>
+
+
+    <!-- ======================================================
+         EXPERIENCE
+    ======================================================= -->
+    <section id="experience" class="section">
+        <h2>Experience</h2>
+
+        <p>
+            <strong>Engineer (AISW), Qualcomm</strong> — 2023–Present<br>
+            Designed lazy weight-loading and graph optimizations for large-model conversion.
+            Added 64-bit DMA support to overcome 4GB addressing limits. Scaled validation
+            to 200,000+ automated test cases across 3 SoC platforms. Reduced onboarding
+            latency for new architectures (Whisper, Llama) by 50%.
+        </p>
+
+        <p>
+            <strong>Software Intern, Qualcomm</strong> — Summer 2022<br>
+            Developed Xlog Analytics for error log processing using Django + JavaScript.
+        </p>
+
+        <p>
+            <strong>Teaching Assistant, IIT Hyderabad</strong> — 2021–2023<br>
+            TA for Foundations of ML, DBMS-II, and Data Structures.
+        </p>
+    </section>
+
+
+    <!-- ======================================================
+         SKILLS
+    ======================================================= -->
+    <section id="skills" class="section">
+        <h2>Skills</h2>
+        <ul>
+            <li><strong>Programming:</strong> Python, C/C++, Java</li>
+            <li><strong>Networking & Security:</strong> P4, Splunk SOAR, Elasticsearch, Kibana, SDN</li>
+            <li><strong>Machine Learning:</strong> TensorFlow, Keras, NumPy, Scikit-learn</li>
+            <li><strong>Development:</strong> SQL, JavaScript, Django, Flutter, Git, CI/CD</li>
+        </ul>
+    </section>
+
+
+    <!-- ======================================================
+         COURSEWORK
+    ======================================================= -->
+    <section id="coursework" class="section">
+        <h2>Coursework</h2>
+        <ul class="course-grid">
+            <li>Computer Networks</li>
+            <li>Foundations of Machine Learning</li>
+            <li>Deep Learning</li>
+            <li>Theory of Computation</li>
+            <li>Reinforcement Learning</li>
+            <li>Database Management Systems</li>
+            <li>Probability in Computing</li>
+            <li>Operating Systems</li>
+            <li>Data Structures & Algorithms</li>
+        </ul>
+    </section>
+
+
+    <!-- ======================================================
+         AWARDS & LEADERSHIP
+    ======================================================= -->
+    <section id="awards" class="section">
+        <h2>Awards & Leadership</h2>
+
+        <ul>
+            <li>VAK UG Research Excellence Award, 2023 — Top undergraduate researcher at IIT Hyderabad.</li>
+            <li>Highest CGPA (2021–22), Computer Science Stream.</li>
+            <li>Department Head (CS/EP/BM/BT/Physics) — DIESTA 2023.</li>
+            <li>Class Representative, CSE Batch of 2023.</li>
+            <li>Captain, IIT Hyderabad Cricket Team — Inter IIT 2022.</li>
+        </ul>
+    </section>
+
 </body>
 </html>

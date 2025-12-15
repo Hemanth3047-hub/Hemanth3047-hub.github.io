@@ -1,14 +1,43 @@
-function openTab(tabName) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tab-content");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-            tablinks = document.getElementsByClassName("tab");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-            document.getElementById(tabName).style.display = "block";
-            event.currentTarget.className += " active";
+/* ============================================================
+   Dark Mode Toggle (Minimal, Academic Style)
+   ============================================================ */
+
+const toggleBtn = document.getElementById("theme-toggle");
+
+// Load saved preference
+if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark-mode");
+    toggleBtn.textContent = "☀️";
+}
+
+// Toggle theme
+toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+
+    if (document.body.classList.contains("dark-mode")) {
+        localStorage.setItem("theme", "dark");
+        toggleBtn.textContent = "☀️";
+    } else {
+        localStorage.setItem("theme", "light");
+        toggleBtn.textContent = "🌙";
+    }
+});
+
+
+/* ============================================================
+   Smooth Scrolling for Navigation Links
+   ============================================================ */
+
+document.querySelectorAll('nav a[href^="#"]').forEach(link => {
+    link.addEventListener("click", function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute("href"));
+
+        if (target) {
+            target.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
         }
-        document.getElementsByClassName("tab")[0].click();
+    });
+});
